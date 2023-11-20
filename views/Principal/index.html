@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../Principal/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="icon" type="image/icon-x"  href="/img/favicon-32x32.png">
+
+</head>
+<body class="font-principal bg-white dark:bg-slate-900 dark:text-white">
+
+    <div id="sidebar"></div>
+
+    <div class="lg:ml-64 lg:pl-4 lg:flex lg:flex-col lg:w-75% bg-gray-200 py-2 dark:bg-slate-800">
+        <div class="text-center py-4">
+            <h1 class="text-4xl font-bold text-gray-700 dark:text-white">Bienvenido</h1>
+        </div>
+        <div id="alerta" class="flex justify-center"></div>
+        <div class="my-6 mx-2">
+            <h2 class="font-bold text-2xl text-gray-700 p-1 mx-1 dark:text-white">Agende su cita ahora</h2>
+            <span>En el siguiente formulario llene sus datos <br>El costo de la consulta son de 40$</span>
+        </div>
+        <div class="flex mx-2">
+            <div class="bg-gray-50 rounded-2xl shadow-lg max-w-3xl mx-6 p-5 items-center flex-col gap-3 md:w-1/2 px-2 flex  dark:bg-slate-900 dark:shadow-md dark:shadow-indigo-600">
+
+                <h1 class="mx-8 font-bold text-xl text-gray-700 dark:text-white">Datos Del Paciente:</h1>
+                <form action="" id="citas">
+                    <div class="flex my-4">
+                    <p>Edad:</p>
+                        <input type="number" id="edad" name="Edad"
+                        class="mx-4 border-solid border-2 rounded-md p-1 w-full dark:bg-slate-600">  
+                    </div>
+                    <div class="flex my-4">
+                        <p>Telefono:</p>
+                        <input type="tel" id="tlf" name="Telefono"
+                        class="mx-4 border-solid border-2 rounded-md p-1 w-full dark:bg-slate-600">
+                    </div>
+                    <div class="flex my-4">
+                        <p>Fecha de la Cita:</p>
+                        <input type="date" id="fecha" name="Fecha" autocomplete="off"
+                        class="mx-4 border-solid border-2 rounded-md p-1 w-full dark:bg-slate-600">
+                    </div>
+                    <div class="flex my-4">
+                        <p>Hora de la cita:</p>
+                        <input type="time"  min="08:00" max="17:00" id="hora" name="Hora"
+                        class="mx-4 border-solid border-2 rounded-md p-1 w-full dark:bg-slate-600">
+                    </div>
+                    <div class="flex my-4">
+                          <p class="py-3">Sintomas:</p>
+                          <textarea id="sintomas" name="Sintomas"
+                          class="mx-4 border-solid border-2 rounded-md p-1 w-full dark:bg-slate-600"></textarea>
+                    </div>
+                    <div class="flex">
+                        <button type="submit" class="text-white mx-32 
+                        border-solid border-2 
+                        rounded-md bg-blue-400 p-1.5 
+                        hover:bg-blue-800 ease-out duration-300">Agendar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="md:block hidden w-1/2">
+                <img class="rounded-md my-6 h-80 w-80 dark:bg-slate-800 flex items-center shadow-lg mx-16 dark:hidden" src="/img/undraw_Doctors_p6aq.png" alt="">
+                <img src="/img/undraw_Doctors_v2.jpg" class="dark:block rounded-md hidden my-6 h-80 w-80 dark:shadow-md dark:shadow-indigo-600 dark:bg-slate-800  items-center shadow-lg mx-16" alt="">
+                <span class="mx-20 text-center">Horario de Consulta de 8:00am a 5:00pm</span>
+            </div>
+        </div>
+
+        <div class="flex m-5">
+            <span>Realizar el pago</span>
+            <a href="/principal/pagos">
+               <button class="mx-4 border border-none p-1 ease-out duration-300 
+                bg-slate-400 rounded-md text-white shadow-lg hover:bg-slate-900 dark:border-solid dark:border-2 dark:bg-slate-800 ">Pagar</button> 
+               </a>  
+        </div>
+        <div class="my-4 text-center">
+            <h2 class="font-bold text-gray-700 text-2xl dark:text-white">Citas agendadas</h2>
+        </div>
+        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+        
+        <div id="container"></div>
+    </div>
+
+    <script src="../components/sidebar.js"></script>
+    <script src="../components/notificaciones.js"></script>
+    <script src="index.js"></script>
+
+</html>
+</body>
+</html>

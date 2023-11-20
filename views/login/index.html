@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/icon-x"  href="/img/favicon-32x32.png">
+    
+
+</head>
+<body>
+    <section class="bg-gray-50 min-h-screen flex items-center
+    justify-center">
+    <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
+        <div class="md:w-1/2 px-16">
+            <h2 class="font-bold text-2xl text-indigo-950">Inicia Sesion</h2>
+            <p class="text-sm mt-4 text-indigo-950">Inicia Sesion y disfruta de nuestros servicios</p>
+            <form id="login" class="flex flex-col gap-4">
+                <input id="input-login" class="p-2 mt-8 rounded-xl border" type="text" name="email" placeholder="Email">
+                <div class="relative">
+                    <input id="pass" class="p-2 rounded-xl border w-full" type="password" 
+                    name="contrasena" placeholder="contrasena">
+                    
+                </div>
+                
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-900 text-white rounded-2xl p-2">Login</button>
+            </form>
+
+            <p id="alerta" class="show-notification text-sm mt-2 mb-2 text-white text-center rounded-lg bg-red-700"></p>
+
+            <div class="mt-10 grid grid-cols-3
+            items-center text-gray-500">
+                <hr class="text-gray-600">
+                <p class="text-center text-sm">O</p>
+                <hr class="text-gray-600">
+            </div>
+                
+                <div class="flex justify-between text-xs mt-5 py-4 items-center">
+                    <p>No tienes cuenta? registrate</p>
+                    <a href="/registrarse">
+                        <button class="py-2 px-5 bg-white border
+                    rounded-xl hover:scale-110">registrate</button>
+                    </a>
+                </div>
+                
+        </div>
+
+        <div class="md:block hidden w-1/2">
+            <img class="rounded-2xl" src="/img/undraw_Online_test_re_kyfx (1).png" alt="">
+        </div>
+    </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
